@@ -10,9 +10,9 @@ export default async function TeamPage() {
   return (
     <div className="relative min-h-screen hero-orange text-white">
       <div className="mx-auto max-w-3xl px-6 py-16">
-        <h1 className="text-4xl font-bold mb-2">{frontmatter.title ?? "Our Team"}</h1>
-        {frontmatter.intro && (
-          <p className="text-white/80 mb-6">{frontmatter.intro as string}</p>
+        <h1 className="text-4xl font-bold mb-2">{typeof frontmatter.title === "string" ? frontmatter.title : "Our Team"}</h1>
+        {typeof frontmatter.intro === "string" && (
+          <p className="text-white/80 mb-6">{frontmatter.intro}</p>
         )}
       {orgs.length > 0 && (
         <div className="mb-8">

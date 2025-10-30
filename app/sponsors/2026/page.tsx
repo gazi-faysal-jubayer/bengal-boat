@@ -9,7 +9,7 @@ export default async function Sponsors2026Page() {
   return (
     <div className="relative min-h-screen hero-soft text-white">
       <div className="mx-auto max-w-5xl px-6 py-16">
-        <h1 className="text-4xl font-bold mb-6">{frontmatter.title ?? "Sponsors 2026"}</h1>
+        <h1 className="text-4xl font-bold mb-6">{typeof frontmatter.title === "string" ? frontmatter.title : "Sponsors 2026"}</h1>
         <div className="grid gap-8">
         {tiers.map((t, i) => (
           <div key={i}>
