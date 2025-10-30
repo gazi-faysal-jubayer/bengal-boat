@@ -1,0 +1,88 @@
+local_backend: true
+backend:
+  name: git-gateway
+  branch: main
+media_folder: public/uploads
+public_folder: /uploads
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - file: content/home.md
+        label: Home
+        name: home
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string, required: false }
+          - label: CTA
+            name: cta
+            widget: object
+            required: false
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Href, name: href, widget: string }
+          - label: Highlights
+            name: highlights
+            widget: list
+            required: false
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+          - { label: Body, name: body, widget: markdown }
+      - file: content/about-us.md
+        label: About Us
+        name: about
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+      - file: content/our-team.md
+        label: Our Team
+        name: team
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: string, required: false }
+          - label: Organizations
+            name: organizations
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+          - { label: Body, name: body, widget: markdown, required: false }
+      - file: content/contact-us.md
+        label: Contact Us
+        name: contact
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Email, name: email, widget: string, required: false }
+          - { label: Body, name: body, widget: markdown }
+  - name: competitions
+    label: Competitions
+    files:
+      - file: content/roboboat/2026.md
+        label: RoboBoat 2026
+        name: roboboat2026
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Location, name: location, widget: string, required: false }
+          - { label: Dates, name: dates, widget: string, required: false }
+          - { label: Body, name: body, widget: markdown }
+  - name: sponsors
+    label: Sponsors
+    files:
+      - file: content/sponsors/2026.md
+        label: Sponsors 2026
+        name: sponsors2026
+        fields:
+          - { label: Title, name: title, widget: string }
+          - label: Tiers
+            name: tiers
+            widget: list
+            fields:
+              - { label: Tier Name, name: name, widget: string }
+              - label: Sponsors
+                name: sponsors
+                widget: list
+                fields:
+                  - { label: Name, name: name, widget: string }
+                  - { label: Logo, name: logo, widget: image, required: false }
+                  - { label: Url, name: url, widget: string, required: false }
+          - { label: Body, name: body, widget: markdown, required: false }

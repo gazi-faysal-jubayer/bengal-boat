@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="Contact">
+  <defs>
+    <linearGradient id="g3" x1="0" x2="1">
+      <stop offset="0" stop-color="#0b0f19"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#g3)"/>
+  <g fill="#facc15" font-family="system-ui, sans-serif">
+    <text x="40" y="80" font-size="40" font-weight="700">Contact Us</text>
+    <text x="40" y="120" font-size="18" fill="#e5e7eb">Partnerships • Media • Sponsors</text>
+  </g>
+  <g stroke="#facc15" stroke-width="6" fill="none">
+    <rect x="600" y="150" width="120" height="80" rx="8"/>
+    <path d="M600 150 l60 45 l60 -45"/>
+  </g>
+</svg>

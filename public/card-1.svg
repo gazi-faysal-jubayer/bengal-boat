@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="About">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0" stop-color="#0a0a0a"/>
+      <stop offset="1" stop-color="#1f2937"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#g1)"/>
+  <g fill="#facc15" font-family="system-ui, sans-serif">
+    <text x="40" y="80" font-size="40" font-weight="700">About Us</text>
+    <text x="40" y="120" font-size="18" fill="#e5e7eb">Mission • Vision • Impact</text>
+  </g>
+  <circle cx="640" cy="200" r="120" fill="#111827"/>
+  <rect x="610" y="110" width="60" height="120" fill="#facc15"/>
+</svg>
