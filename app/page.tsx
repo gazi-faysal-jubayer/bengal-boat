@@ -146,7 +146,7 @@ export default async function Home() {
 
       <footer className="border-t border-white/20 bg-orange-600/60">
         <div className="mx-auto max-w-7xl px-6 py-8 text-sm text-white/70 flex flex-wrap items-center justify-between gap-4">
-          <p> {new Date().getFullYear()} Bengal Boat — Bangladesh RoboBoat 2026</p>
+          <p> {(process.env.NEXT_PUBLIC_BUILD_YEAR ?? "2025")} Bengal Boat — Bangladesh RoboBoat 2026</p>
           <div className="flex gap-4">
             <Link href="/support-us" className="hover:underline underline-offset-4">Support Us</Link>
             <Link href="/contact-us" className="hover:underline underline-offset-4">Contact</Link>
