@@ -13,7 +13,6 @@ export default async function RoboBoat2026Page() {
         {frontmatter.location && frontmatter.dates && <span> · </span>}
         {frontmatter.dates && <span>Dates: {frontmatter.dates as string}</span>}
         </div>
-        {/* eslint-disable-next-line react/no-danger */}
         <div className="prose prose-invert prose-lg" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </div>

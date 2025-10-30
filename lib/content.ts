@@ -14,7 +14,7 @@ function readMarkdown(filePath: string) {
   const full = path.join(process.cwd(), filePath);
   const raw = fs.readFileSync(full, "utf8");
   const parsed = matter(raw);
-  return { data: parsed.data as Record<string, any>, content: parsed.content };
+  return { data: parsed.data as Record<string, unknown>, content: parsed.content };
 }
 
 export function getHomeContent(): HomeContent {

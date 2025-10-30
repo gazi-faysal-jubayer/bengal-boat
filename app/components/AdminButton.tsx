@@ -4,14 +4,19 @@ import Script from "next/script";
 
 export default function AdminButton() {
   const handleClick = () => {
-    const w = window as any;
-    const ni = w?.netlifyIdentity;
+    const w = window as Window & { netlifyIdentity?: unknown };
+    const ni = w?.netlifyIdentity as {
+      currentUser?: () => unknown;
+      on?: (event: string, callback: () => void) => void;
+      close?: () => void;
+      open?: (mode: string) => void;
+    } | undefined;
     const goAdmin = () => { window.location.href = "/admin"; };
     if (!ni) { goAdmin(); return; }
     const user = ni.currentUser?.();
     if (user) { goAdmin(); return; }
-    ni.on("login", () => { ni.close(); goAdmin(); });
-    ni.open("login");
+    ni.on?.("login", () => { ni.close?.(); goAdmin(); });
+    ni.open?.("login");
   };
 
   return (

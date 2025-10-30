@@ -24,7 +24,6 @@ export default async function TeamPage() {
           </ul>
         </div>
       )}
-        {/* eslint-disable-next-line react/no-danger */}
         <div className="prose prose-invert" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </div>

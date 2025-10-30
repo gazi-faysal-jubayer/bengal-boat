@@ -11,7 +11,6 @@ export default async function ContactPage() {
         {frontmatter.email && (
           <p className="text-white/80 mb-6">Email: <a className="underline hover:text-white" href={`mailto:${frontmatter.email as string}`}>{frontmatter.email as string}</a></p>
         )}
-        {/* eslint-disable-next-line react/no-danger */}
         <div className="prose prose-invert" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </div>

@@ -24,7 +24,6 @@ export default async function Sponsors2026Page() {
           </div>
         ))}
         </div>
-        {/* eslint-disable-next-line react/no-danger */}
         <div className="prose prose-invert mt-10" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </div>
