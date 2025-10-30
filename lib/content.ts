@@ -19,11 +19,30 @@ function readMarkdown(filePath: string) {
 
 export function getHomeContent(): HomeContent {
   const { data, content } = readMarkdown("content/home.md");
+  const title = typeof data.title === "string" ? data.title : "";
+  const subtitle = typeof data.subtitle === "string" ? data.subtitle : undefined;
+  const cta = (typeof data.cta === "object" && data.cta !== null
+    && typeof (data.cta as Record<string, unknown>).label === "string"
+    && typeof (data.cta as Record<string, unknown>).href === "string")
+    ? {
+        label: (data.cta as Record<string, string>).label,
+        href: (data.cta as Record<string, string>).href,
+      }
+    : undefined;
+  const highlights = Array.isArray(data.highlights)
+    ? data.highlights
+        .filter((h: unknown): h is { title: string; text: string } =>
+          !!h && typeof h === "object"
+          && typeof (h as Record<string, unknown>).title === "string"
+          && typeof (h as Record<string, unknown>).text === "string"
+        )
+    : [];
+
   return {
-    title: data.title ?? "",
-    subtitle: data.subtitle ?? "",
-    cta: data.cta ?? undefined,
-    highlights: Array.isArray(data.highlights) ? data.highlights : [],
+    title,
+    subtitle,
+    cta,
+    highlights,
     body: content.trim(),
   };
 }
