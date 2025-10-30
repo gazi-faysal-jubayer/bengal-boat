@@ -1,0 +1,101 @@
+{
+  "tech_stack": [
+    "TypeScript",
+    "Next.js 15 (App Router, static export)",
+    "React 19",
+    "Tailwind CSS v4",
+    "PostCSS",
+    "gray-matter",
+    "remark + remark-html"
+  ],
+  "features": [
+    {
+      "name": "Static Markdown Content Loader",
+      "description": "Reads markdown files from content/ using gray-matter and converts to HTML via remark.",
+      "files": [
+        "lib/content.ts",
+        "lib/markdown.ts",
+        "content/home.md",
+        "content/about-us.md",
+        "content/our-team.md",
+        "content/roboboat/2026.md",
+        "content/sponsors/2026.md",
+        "content/support-us.md"
+      ]
+    },
+    {
+      "name": "Home Page with Highlights and CTA",
+      "description": "Renders hero, highlights, and markdown body from parsed frontmatter.",
+      "files": [
+        "app/page.tsx"
+      ]
+    },
+    {
+      "name": "About Page",
+      "description": "Displays About Us markdown content with styled prose.",
+      "files": [
+        "app/about-us/page.tsx"
+      ]
+    },
+    {
+      "name": "Team Page",
+      "description": "Shows team intro and organizations list from frontmatter and body HTML.",
+      "files": [
+        "app/our-team/page.tsx"
+      ]
+    },
+    {
+      "name": "RoboBoat 2026 Page",
+      "description": "Displays location and dates from frontmatter and body HTML.",
+      "files": [
+        "app/roboboat/2026/page.tsx"
+      ]
+    },
+    {
+      "name": "Sponsors 2026 Page",
+      "description": "Renders sponsor tiers from frontmatter and markdown body.",
+      "files": [
+        "app/sponsors/2026/page.tsx"
+      ]
+    },
+    {
+      "name": "Support Us Page",
+      "description": "Static support content from markdown.",
+      "files": [
+        "app/support-us/page.tsx"
+      ]
+    },
+    {
+      "name": "Contact Page",
+      "description": "Email from frontmatter with mailto link and markdown body.",
+      "files": [
+        "app/contact-us/page.tsx"
+      ]
+    },
+    {
+      "name": "Admin Button (Netlify Identity)",
+      "description": "Client-side button to open Netlify Identity and redirect to /admin.",
+      "files": [
+        "app/components/AdminButton.tsx",
+        "public/admin/index.html",
+        "public/admin/config.yml"
+      ]
+    },
+    {
+      "name": "Global Layout and Styles",
+      "description": "App layout with navigation and Tailwind v4 inline theme tokens.",
+      "files": [
+        "app/layout.tsx",
+        "app/globals.css",
+        "postcss.config.mjs"
+      ]
+    },
+    {
+      "name": "Next.js Export Config",
+      "description": "Configured for static export and optional GitHub Pages basePath/assetPrefix.",
+      "files": [
+        "next.config.ts"
+      ]
+    }
+  ]
+}

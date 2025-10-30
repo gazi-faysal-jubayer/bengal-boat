@@ -9,9 +9,9 @@ export default async function RoboBoat2026Page() {
       <div className="mx-auto max-w-3xl px-6 pt-24 pb-20">
         <h1 className="text-5xl leading-[1.15] tracking-tight font-extrabold mb-4">{typeof frontmatter.title === "string" ? frontmatter.title : "RoboBoat 2026"}</h1>
         <div className="text-base md:text-lg leading-relaxed text-white/80 mb-6">
-        {frontmatter.location && <span>Location: {frontmatter.location as string}</span>}
-        {frontmatter.location && frontmatter.dates && <span> · </span>}
-        {frontmatter.dates && <span>Dates: {frontmatter.dates as string}</span>}
+        {typeof frontmatter.location === "string" && <span>Location: {frontmatter.location}</span>}
+        {typeof frontmatter.location === "string" && typeof frontmatter.dates === "string" && <span> · </span>}
+        {typeof frontmatter.dates === "string" && <span>Dates: {frontmatter.dates}</span>}
         </div>
         <div className="prose prose-invert prose-lg" dangerouslySetInnerHTML={{ __html: html }} />
       </div>

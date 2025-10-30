@@ -2,5 +2,14 @@
   "status": "commited",
   "type": "frontend",
   "scope": "codebase",
-  "localEndpoint": "http://localhost:3000"
+  "localEndpoint": "http://localhost:3000",
+  "executionArgs": {
+    "projectName": "bengal-boat",
+    "projectPath": "G:\\Projects\\Projects\\BengalBoat\\bengal-boat",
+    "testIds": [],
+    "additionalInstruction": "",
+    "envs": {
+      "API_KEY": "sk-user-RNeqj...9S9Ts"
+    }
+  }
 }

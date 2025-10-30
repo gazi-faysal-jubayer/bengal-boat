@@ -1,0 +1,32 @@
+{
+  "project": "bengal-boat",
+  "baseUrl": "http://localhost:3000",
+  "tests": [
+    {
+      "id": "home-renders",
+      "name": "Home page renders and shows nav links",
+      "steps": [
+        { "action": "visit", "path": "/" },
+        { "action": "assertText", "text": "Bengal Boat" },
+        { "action": "assertText", "text": "RoboBoat 2026" },
+        { "action": "assertLink", "text": "About", "href": "/about-us/" }
+      ]
+    },
+    {
+      "id": "about-renders",
+      "name": "About page renders",
+      "steps": [
+        { "action": "visit", "path": "/about-us/" },
+        { "action": "assertText", "text": "About" }
+      ]
+    },
+    {
+      "id": "contact-email",
+      "name": "Contact page renders email when provided",
+      "steps": [
+        { "action": "visit", "path": "/contact-us/" },
+        { "action": "assertTextContains", "text": "Email:" }
+      ]
+    }
+  ]
+}
